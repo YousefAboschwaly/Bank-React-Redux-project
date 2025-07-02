@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Customer() {
+function CreateCustomer() {
   const [fullName, setFullName] = useState("");
   const [nationalId, setNationalId] = useState("");
 
@@ -30,4 +30,4 @@ function Customer() {
   );
 }
 
-export default Customer;
+export default CreateCustomer;
