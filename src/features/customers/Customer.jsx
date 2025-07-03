@@ -8,7 +8,7 @@ console.log(customer)
   return (
     <h2>
       👋 Welcome,{}
-      {customer.name}!
+      {customer.fullName}!
     </h2>
   );
 }
