@@ -1,7 +1,8 @@
-import { combineReducers, createStore } from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 import customerReducer from "./features/customers/customerSlice";
 import accountReducer from "./features/accounts/accountSlice";
 
+import { thunk } from 'redux-thunk'
 
 
 
@@ -10,7 +11,7 @@ const finalReducer = combineReducers({
   customer: customerReducer,
 })
 
-export const store = createStore(finalReducer)
+export const store = createStore(finalReducer,applyMiddleware(thunk));
 
 
 

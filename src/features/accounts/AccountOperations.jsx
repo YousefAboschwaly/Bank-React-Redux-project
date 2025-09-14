@@ -11,9 +11,12 @@ function AccountOperations() {
   const dispatch = useDispatch()
   const account = useSelector((store)=>store.account)
   console.log(account)
+
+
+
   function handleDeposit() {
     if(!depositAmount || depositAmount <= 0) return;
-    dispatch(deposit(depositAmount))
+    dispatch(deposit(depositAmount, currency))
     setDepositAmount("");
     setCurrency("USD");
   }
